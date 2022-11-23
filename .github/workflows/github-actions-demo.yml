@@ -19,6 +19,8 @@ jobs:
           ls ${{ github.workspace }}
       - name: Use global env
         run: echo $SERVICE_PORT
+      - name: Show process
+        run: ps xf -f
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
   More-Action:
@@ -34,4 +36,6 @@ jobs:
         run: echo $SERVICE_PORT
         env:
           SERVICE_PORT: 9999
+      - name: Show process
+        run: ps xf -f
       - run: echo "🍏 This job's status is ${{ job.status }}."
