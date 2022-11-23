@@ -33,5 +33,5 @@ jobs:
       - name: Use local env
         run: echo $SERVICE_PORT
         env:
-          SERVICE_HOST: 9999
+          SERVICE_PORT: 9999
       - run: echo "🍏 This job's status is ${{ job.status }}."
