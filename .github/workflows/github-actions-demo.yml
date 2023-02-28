@@ -22,7 +22,6 @@ jobs:
       - name: Show process
         run: ps xf -f
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: exit 1
 
   More-Action:
     runs-on: ubuntu-latest
