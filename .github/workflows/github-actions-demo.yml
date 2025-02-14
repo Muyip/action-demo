@@ -22,6 +22,7 @@ jobs:
       - name: Show process
         run: ps xf -f
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo '1.2.3' > version.txt
 
   More-Action:
     runs-on: ubuntu-latest
@@ -56,3 +57,11 @@ jobs:
         run: go version
       - name: Task Done
         run: echo 'TASK DONE!!!'
+
+  Read-Version:
+    runs-on: ubuntu-latest
+    needs:
+      - Explore-GitHub-Actions
+
+    steps:
+      - run: cat version.txt
