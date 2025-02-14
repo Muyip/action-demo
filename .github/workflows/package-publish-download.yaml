@@ -23,7 +23,7 @@ jobs:
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
-          name: release-version
+          name: released-version
           path: art
       - run: tree
       - run: cat art/version.txt
