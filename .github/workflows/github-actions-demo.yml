@@ -73,5 +73,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: release-version
-          path: version.txt
-      - run: cat version.txt
+          path: version
+      - run: ls -al
+      - run: cat version/version.txt
